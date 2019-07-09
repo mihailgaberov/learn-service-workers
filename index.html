@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Service Workers</title>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+<body>
+<div class="container">
+  <div class="sw-switcher">
+    <input type="radio" id="switcher" name="switcher" />
+    <label for="switcher">Turn On/Off SW</label>
+  </div>
+  <input placeholder="Time (ms)" />
+  <input placeholder="How many pancakes [from 2 to 50]*"/>
+  <button onClick="">Action</button>
+  <button onClick="">Reset</button>
+</div>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').then(registration => {
+      console.log('>>> SW registration successful', registration)
+    })
+        .catch(err => console.log('>>> Service Worker registration failed', err))
+  }
+</script>
+<script type="javascript" src="mockAPI.js"></script>
+</body>
+</html>

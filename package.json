@@ -1,0 +1,14 @@
+{
+  "name": "learn-service-workers",
+  "version": "1.0.0",
+  "description": "Demo app showing how to utilize the power of Service Workers for executing heavy and slow tasks wihtou blocking the UI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mihail Gaberov",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}

@@ -1,0 +1,54 @@
+@-ms-viewport{
+  width: device-width;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+  border: 2px solid coral;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.sw-switcher {
+  display: inline;
+}
+
+label {
+  font-size: 11px;
+  font-family: Athelas sans-serif;
+}
+
+button {
+  background: palevioletred;
+  color: white;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.7em 1em;
+  width: 296px;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover:enabled {
+  background: tomato;
+  color: #333333;
+}
+
+button:disabled {
+  opacity: .5;
+}
+
+input {
+  padding: 1em;
+  margin: 1em;
+  width: 275px;
+  color: palevioletred;
+  background: papayawhip;
+  border: none;
+  border-radius: 3px;
+}
