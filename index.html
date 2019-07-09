@@ -7,12 +7,15 @@
   <link rel="stylesheet" href="styles.css" type="text/css">
 <body>
 <div class="container">
+  <h3>Service Workers Demo</h3>
   <div class="sw-switcher">
-    <input type="radio" id="switcher" name="switcher" />
-    <label for="switcher">Turn On/Off SW</label>
+    <input type="radio" id="switcher-on" name="switcher" />
+    <label for="switcher-on">On</label>
+    <input type="radio" id="switcher-off" name="switcher" />
+    <label for="switcher-off">Off</label>
   </div>
-  <input placeholder="Time (ms)" />
-  <input placeholder="How many pancakes [from 2 to 50]*"/>
+  <input placeholder="Time (ms)" type="text" />
+  <input placeholder="How many pancakes [from 2 to 50]*" type="text" />
   <button onClick="">Action</button>
   <button onClick="">Reset</button>
 </div>

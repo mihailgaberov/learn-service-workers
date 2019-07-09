@@ -4,7 +4,7 @@
   "description": "Demo app showing how to utilize the power of Service Workers for executing heavy and slow tasks wihtou blocking the UI.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "http-server"
   },
   "author": "Mihail Gaberov",
   "license": "MIT",

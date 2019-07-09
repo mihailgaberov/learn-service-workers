@@ -14,12 +14,22 @@
 }
 
 .sw-switcher {
-  display: inline;
+  display: flex;
+  width: 150px;
+  margin: 7px;
 }
 
 label {
-  font-size: 11px;
-  font-family: Athelas sans-serif;
+  font-size: 14px;
+  font-family: "Arial Rounded MT Bold", serif;
+  margin: 20px 7px 0 0;
+  width: 105px;
+}
+
+input[type="radio"] {
+  height: 50px;
+  width: 50px;
+  background-color: gainsboro;
 }
 
 button {
@@ -43,7 +53,7 @@ button:disabled {
   opacity: .5;
 }
 
-input {
+input[type="text"] {
   padding: 1em;
   margin: 1em;
   width: 275px;
