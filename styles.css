@@ -19,6 +19,15 @@
   margin: 7px;
 }
 
+.desc {
+  font-size: .9em;
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+  padding: 0 7px;
+  font-family: "Arial Rounded MT Bold", serif;
+}
+
 label {
   font-size: 1em;
   font-family: "Arial Rounded MT Bold", serif;
@@ -51,16 +60,6 @@ button:hover:enabled {
 
 button:disabled {
   opacity: .5;
-}
-
-input[type="text"] {
-  padding: 1em;
-  margin: 1em;
-  width: 275px;
-  color: palevioletred;
-  background: papayawhip;
-  border: none;
-  border-radius: 3px;
 }
 
 .timer {
