@@ -20,7 +20,7 @@
 }
 
 label {
-  font-size: 14px;
+  font-size: 1em;
   font-family: "Arial Rounded MT Bold", serif;
   margin: 20px 7px 0 0;
   width: 105px;
@@ -61,4 +61,15 @@ input[type="text"] {
   background: papayawhip;
   border: none;
   border-radius: 3px;
+}
+
+.timer {
+  font-size: 2em;
+  font-family: "Arial Rounded MT Bold", serif;
+  background-color: coral;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+  padding: 14px;
+  color: wheat;
 }

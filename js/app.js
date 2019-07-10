@@ -2,7 +2,7 @@ import { loadImageSync } from './mockAPI';
 
 function renderSeconds(element) {
   setInterval(() => {
-    element.innerText = new Date().toTimeString();
+    element.innerText = new Date().toTimeString().substr(0, 9);
   }, 1000);
 }
 
