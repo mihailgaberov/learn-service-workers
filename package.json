@@ -4,11 +4,17 @@
   "description": "Demo app showing how to utilize the power of Service Workers for executing heavy and slow tasks wihtou blocking the UI.",
   "main": "index.js",
   "scripts": {
-    "start": "http-server"
+    "start": "browserify js/*.js -o bundle.js -t [ babelify --presets [ @babel/preset-env] ] && http-server"
   },
   "author": "Mihail Gaberov",
   "license": "MIT",
   "dependencies": {
     "http-server": "^0.11.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "babelify": "^10.0.0",
+    "browserify": "^16.3.0"
   }
 }
