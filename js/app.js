@@ -6,9 +6,10 @@ function renderSeconds(element) {
   }, 1000);
 }
 
-function renderImage() {
+function renderImage(srcUrl) {
   const img = document.createElement('img');
-  img.src = loadImageSync();
+  // img.src = loadImageSync();
+  img.src = srcUrl;
   document.body.appendChild(img)
 }
 
@@ -18,14 +19,18 @@ window.onload = () => {
 };
 
 const btnFetch = document.getElementById('fetch-btn');
-
-
 btnFetch.addEventListener('click', () => {
+  navigator.serviceWorker.controller.postMessage('FETCH_IMAGE');
+  /*  for (let i = 0; i <  100000; i++) {
+      console.log('Blocking main thread.');
+    }
+
+    renderImage(loadImageSync());*/
+});
 
 
-  for (let i = 0; i <  100000; i++) {
-    console.log('Blocking main thread.');
-  }
-
-  renderImage();
+// Message from Service Worker
+navigator.serviceWorker.addEventListener('message', event => {
+  const srcUrl = event.data;
+  renderImage(srcUrl);
 });
