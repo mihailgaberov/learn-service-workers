@@ -1,3 +1,7 @@
+html, body, label, input, button {
+  font-family: "Arial Rounded MT Bold", serif;
+}
+
 @-ms-viewport{
   width: device-width;
 }
@@ -20,7 +24,6 @@
 }
 
 .desc {
-  font-family: "Arial Rounded MT Bold", serif;
   font-size: .9em;
   text-align: center;
   color: #4e9b9b;
@@ -31,7 +34,6 @@
 
 label {
   font-size: 1em;
-  font-family: "Arial Rounded MT Bold", serif;
   margin: 20px 7px 0 0;
   width: 105px;
 }
@@ -45,7 +47,7 @@ input[type="radio"] {
 button {
   background: coral;
   color: white;
-  font-size: 1em;
+  font-size: 1.3em;
   margin: 1em;
   padding: 0.7em 1em;
   width: 296px;
@@ -65,7 +67,6 @@ button:disabled {
 
 .timer {
   font-size: 2em;
-  font-family: "Arial Rounded MT Bold", serif;
   background-color: lightcoral;
   -webkit-border-radius: 14px;
   -moz-border-radius: 14px;
