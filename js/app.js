@@ -12,13 +12,17 @@ function renderImage() {
   document.body.appendChild(img)
 }
 
-// Start timer
+// Start timer when load the page
 window.onload = () => {
   renderSeconds(document.getElementById('time'));
 };
 
 const btnFetch = document.getElementById('fetch-btn');
+
+
 btnFetch.addEventListener('click', () => {
+
+
   for (let i = 0; i <  100000; i++) {
     console.log('Blocking main thread.');
   }

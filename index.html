@@ -20,13 +20,13 @@
   <button id="fetch-btn">Fetch Big Image</button>
 </div>
 <script type="application/javascript" src="bundle.js"></script>
-<!--<script>
+<script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js').then(registration => {
-      console.log('>>> SW registration successful', registration)
+      console.log('[ServiceWorker] Registration', registration);
     })
-        .catch(err => console.log('>>> Service Worker registration failed', err))
+        .catch(err => console.log('[ServiceWorker] Registration failed.', err))
   }
-</script>-->
+</script>
 </body>
 </html>
