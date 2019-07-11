@@ -65,8 +65,6 @@ self.addEventListener('message', event => {
       console.log('Blocking the service worker thread.');
     }
 
-    console.log('Service ready to load.');
-
     loadImage().then(response => {
       clients.matchAll().then(clients => {
         clients.forEach(client => {
