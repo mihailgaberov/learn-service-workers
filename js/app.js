@@ -37,6 +37,8 @@ btnFetch.addEventListener('click', () => {
       console.log('Blocking main thread.');
     }
 
+    console.log('Main thread ready to load.');
+
     renderImage(loadImageSync());
   }
 });
