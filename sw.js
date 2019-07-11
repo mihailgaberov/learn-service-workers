@@ -62,7 +62,7 @@ self.addEventListener('message', event => {
   if (event.data === 'FETCH_IMAGE') {
 
     for (let i = 0; i <  100000; i++) {
-      console.log('Blocking main thread.');
+      console.log('Blocking the service worker thread.');
     }
 
     loadImage().then(response => {

@@ -1,16 +1,23 @@
 import { loadImageSync } from './mockAPI';
 
+const TIME_BEFORE_REMOVING_IMG = 3000;
+const TIME_FOR_UPDATING_CLOCK = 1000;
+
+
 function renderSeconds(element) {
   setInterval(() => {
     element.innerText = new Date().toTimeString().substr(0, 9);
-  }, 1000);
+  }, TIME_FOR_UPDATING_CLOCK);
 }
 
 function renderImage(srcUrl) {
   const img = document.createElement('img');
-  // img.src = loadImageSync();
   img.src = srcUrl;
-  document.body.appendChild(img)
+  document.body.appendChild(img);
+
+  setTimeout(() => {
+    document.body.removeChild(img);
+  }, TIME_BEFORE_REMOVING_IMG)
 }
 
 // Start timer when load the page
@@ -20,12 +27,18 @@ window.onload = () => {
 
 const btnFetch = document.getElementById('fetch-btn');
 btnFetch.addEventListener('click', () => {
-  navigator.serviceWorker.controller.postMessage('FETCH_IMAGE');
-  /*  for (let i = 0; i <  100000; i++) {
+
+  const isServiceWorkingOn = document.getElementById('switcher-on').checked === true;
+
+  if (isServiceWorkingOn) {
+    navigator.serviceWorker.controller.postMessage('FETCH_IMAGE');
+  } else {
+    for (let i = 0; i < 100000; i++) {
       console.log('Blocking main thread.');
     }
 
-    renderImage(loadImageSync());*/
+    renderImage(loadImageSync());
+  }
 });
 
 
