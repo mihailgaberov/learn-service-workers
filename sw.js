@@ -33,7 +33,7 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   console.log('[Service Worker] Fetch', event.request.url);
-  const dataUrl = 'http://localhost:8080/assets/big_image_10mb.jpg';
+  const dataUrl = 'http://127.0.0.1:8080/assets/big_image_10mb.jpg';
 
   if (event.request.url.indexOf(dataUrl) > -1) {
     event.respondWith(
