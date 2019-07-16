@@ -7,6 +7,8 @@ const filesToCache = [
   'assets/big_image_2mb.jpg'
 ];
 
+const bigImageUrl = '/assets/big_image_10mb.jpg';
+
 self.addEventListener('install', event => {
   console.log('[ServiceWorker] Install');
   event.waitUntil(
@@ -33,9 +35,8 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   console.log('[Service Worker] Fetch', event.request.url);
-  const dataUrl = '/assets/big_image_10mb.jpg';
 
-  if (event.request.url.indexOf(dataUrl) > -1) {
+  if (event.request.url.indexOf(bigImageUrl) > -1) {
     event.respondWith(
         caches.open(dataCacheName).then(function (cache) {
           return fetch(event.request).then(function (response) {
@@ -54,14 +55,14 @@ self.addEventListener('fetch', event => {
 });
 
 function loadImage() {
-  return fetch('http://localhost:8080/assets/big_image_10mb.jpg');
+  return fetch(bigImageUrl);
 }
 
 // Message from the client
 self.addEventListener('message', event => {
   if (event.data === 'FETCH_IMAGE') {
 
-    for (let i = 0; i <  100000; i++) {
+    for (let i = 0; i < 100000; i++) {
       console.log('Blocking the service worker thread.');
     }
 
